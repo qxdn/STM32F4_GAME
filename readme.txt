@@ -1,59 +1,13 @@
-ÊµÑéÆ÷²Ä:
-	Ì½Ë÷ÕßSTM32F4¿ª·¢°å
-	
-ÊµÑéÄ¿µÄ:
-	Ñ§Ï°µç×èÊ½/µçÈÝÊ½´¥ÃþÆÁµÄÊ¹ÓÃ.
-	
-Ó²¼þ×ÊÔ´:
-	1,DS0(Á¬½ÓÔÚPF9)
-	2,´®¿Ú1(²¨ÌØÂÊ:115200,PA9/PA10Á¬½ÓÔÚ°åÔØUSB×ª´®¿ÚÐ¾Æ¬CH340ÉÏÃæ)
-	3,ALIENTEK 2.8/3.5/4.3/7´çTFTLCDÄ£¿é(Í¨¹ýFSMCÇý¶¯,FSMC_NE4½ÓLCDÆ¬Ñ¡/A6½ÓRS) 
-	4,°´¼üKEY0(PE4)
-	3,´¥ÃþÆÁ(TFTLCDÄ£¿é×Ô´øÁË,IO×´Ì¬Îª:T_PEN(PB1)/T_MOSI(PF11)/T_MISO(PB2)/T_SCK(PB0)/T_CS(PC13)) 
+å®žéªŒå™¨æ:
+	æŽ¢ç´¢è€…STM32F4å¼€å‘æ¿ï¼Œ4.3TFTæ˜¾ç¤ºå±		
+ç¡¬ä»¶èµ„æº:
+	1,DS0(è¿žæŽ¥åœ¨PF9)
+	2,ä¸²å£1(æ³¢ç‰¹çŽ‡:115200,PA9/PA10è¿žæŽ¥åœ¨æ¿è½½USBè½¬ä¸²å£èŠ¯ç‰‡CH340ä¸Šé¢)
+	3,ALIENTEK 2.8/3.5/4.3/7å¯¸TFTLCDæ¨¡å—(é€šè¿‡FSMCé©±åŠ¨,FSMC_NE4æŽ¥LCDç‰‡é€‰/A6æŽ¥RS) 
+	4,æŒ‰é”®KEY0(PE4)
+	3,è§¦æ‘¸å±(TFTLCDæ¨¡å—è‡ªå¸¦äº†,IOçŠ¶æ€ä¸º:T_PEN(PB1)/T_MOSI(PF11)/T_MISO(PB2)/T_SCK(PB0)/T_CS(PC13)) 
 
-ÊµÑéÏÖÏó:
-	±¾ÊµÑé´úÂë,¿ª»úµÄÊ±ºòÏÈÍ¨¹ýLCD ID¼ì²âÊÇµçÈÝÆÁ£¨ALIENTEK 4.3´ç/7´çµçÈÝ´¥ÃþÆÁ£©»¹ÊÇµç×èÆÁ£¨ALIENTEK 2.4/2.8/3.5
-	´çµç×èÆÁ£©£¬È»ºó½øÈëÏà¹ØµÄ²âÊÔ¡£
-	Èç¹ûÊÇµç×èÆÁ£¬ÔòÍ¨¹ý24C02µÄÊý¾ÝÅÐ¶Ï´¥ÃþÆÁÊÇ·ñÒÑ¾­Ð£×¼¹ý£¬Èç¹ûÃ»ÓÐÐ£×¼£¬ÔòÖ´ÐÐÐ£×¼³ÌÐò£¬Ð£×¼¹ýºóÔÙ½øÈëÊÖÐ´³ÌÐò¡£Èç
-	¹ûÒÑ¾­Ð£×¼ÁË£¬¾ÍÖ±½Ó½øÈëÊÖÐ´³ÌÐò£¬´ËÊ±¿ÉÒÔÍ¨¹ý°´¶¯ÆÁÄ»À´ÊµÏÖÊÖÐ´ÊäÈë¡£ÆÁÄ»ÉÏ»áÓÐÒ»¸öÇå¿ÕµÄ²Ù×÷ÇøÓò£¨RST£©£¬µã»÷Õâ
-	¸öµØ·½¾Í»á½«ÊäÈëÈ«²¿Çå³ý£¬»Ö¸´°×°å×´Ì¬¡£³ÌÐò»áÉèÖÃÒ»¸öÇ¿ÖÆÐ£×¼£¬¾ÍÊÇÍ¨¹ý°´KEY0À´ÊµÏÖ£¬Ö»Òª°´ÏÂKEY0¾Í»á½øÈëÇ¿ÖÆÐ£×¼
-	³ÌÐò¡£
-	Èç¹ûÊÇµçÈÝÆÁ£¬ÔòÖ±½Ó½øÈëÊÖÐ´²âÊÔ³ÌÐò£¬µçÈÝ´¥ÃþÆÁÖ§³ÖALIENTEK 4.3´ç/ÐÂ¿î(SSD1963Çý¶¯°æ±¾)7´çTFTLCDÄ£¿é£¬Ö§³Ö5µã´¥
-	Ãþ¡£µçÈÝ´¥ÃþÆÁ²»ÐèÒªÐ£×¼£¬ÆäËû²Ù×÷Í¬µç×è´¥ÃþÆÁµÄ²âÊÔ¡£ 
-	
-	µç×èÆÁÐ£×¼·½·¨£º
-	1£¬ÏÂÔØ±¾´úÂë¡£
-	2£¬°´KEY0¡£
-	3£¬ÒÀ´Îµã»÷ÆÁÄ»ÉÏµÄ4¸öÊ®×Ö¼Ü£¨Ê®×Ö+Ð¡È¦È¦£©µÄ×îÖÐÑë£¨×îºÃÓÃ±Ê¼â£©
-	4£¬Ö±µ½ÆÁÄ»ÌáÊ¾£º"Touch Screen Adjust OK!"×ÖÑù¡£
-	5£¬Ð£×¼Íê³É¡£
-	
-×¢ÒâÊÂÏî: 
-	1,4.3´çºÍ7´çÆÁÐèÒª±È½Ï´óµçÁ÷,USB¹©µç¿ÉÄÜ²»×ã,ÇëÓÃÍâ²¿µçÔ´ÊÊÅäÆ÷(ÍÆ¼öÍâ½Ó12V 1AµçÔ´).
-	2,±¾Àý³ÌÔÚLCD_Initº¯ÊýÀïÃæ(ÔÚILI93xx.c),ÓÃµ½ÁËprintf,Èç¹û²»³õÊ¼»¯´®¿Ú1,½«µ¼ÖÂÒº¾§ÎÞ·¨ÏÔÊ¾!!  
-	3,±¾Àý³Ì²»Ö§³ÖALIENTEK CPLD·½°¸µÄ7´çµçÈÝ´¥ÃþÆÁ£¨V1°æ±¾£©µÄ²âÊÔ!!
-	 
-
-					ÕýµãÔ­×Ó@ALIENTEK
-					2014-10-25
-					¹ãÖÝÊÐÐÇÒíµç×Ó¿Æ¼¼ÓÐÏÞ¹«Ë¾
-					µç»°£º020-38271790
-					´«Õæ£º020-36773971
-					¹ºÂò£ºhttp://shop62103354.taobao.com
-					http://shop62057469.taobao.com
-					¹«Ë¾ÍøÕ¾£ºwww.alientek.com
-					¼¼ÊõÂÛÌ³£ºwww.openedv.com
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
+å®žéªŒçŽ°è±¡:
+	1,å¼€æœºæ—¶é»‘å±ï¼Œå‡ºçŽ°little gameï¼Œé—ªçƒå‡ºçŽ°touch to start
+	2,æŒ‰ä¸‹åŽåŒfly birdçŽ©å§
+	3ï¼Œæ­»äº¡åŽæŒ‰ä¸‹å¯¹åº”æŒ‰é”®å°±å¯ä»¥é‡æ–°å¼€å§‹
